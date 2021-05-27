@@ -48,8 +48,8 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'recovery_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
 'original_amount' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'group_begin_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
-'group_end_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',    ];
+'group_begin_date' => '\DateTime',
+'group_end_date' => '\DateTime',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
