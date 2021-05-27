@@ -49,7 +49,8 @@ class Dimensions implements ModelInterface, ArrayAccess
         'length' => 'float',
         'width' => 'float',
         'height' => 'float',
-'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement',    ];
+        'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement'
+    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.

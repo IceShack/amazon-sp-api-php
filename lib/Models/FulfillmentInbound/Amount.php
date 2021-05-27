@@ -47,7 +47,8 @@ class Amount implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'currency_code' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode',
-'value' => 'float',    ];
+        'value' => 'float',
+    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
