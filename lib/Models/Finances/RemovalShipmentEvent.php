@@ -204,7 +204,7 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess
     /**
      * Gets posted_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \DateTime
      */
     public function getPostedDate()
     {
@@ -214,7 +214,7 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess
     /**
      * Sets posted_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $posted_date posted_date
+     * @param \DateTime $posted_date posted_date
      *
      * @return $this
      */

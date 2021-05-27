@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**posted_date** | [**\Swagger\Client\Models\\DateTime**](\DateTime.md) |  | [optional] 
+**posted_date** | \DateTime |  | [optional] 
 **tds_order_id** | **string** | A tax deduction at source (TDS) claim identifier. | [optional] 
 **reimbursed_amount** | [**\Swagger\Client\Models\Currency**](Currency.md) |  | [optional] 
 

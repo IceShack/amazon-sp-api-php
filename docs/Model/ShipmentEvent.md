@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **order_fee_list** | [**\Swagger\Client\Models\FeeComponentList**](FeeComponentList.md) |  | [optional] 
 **order_fee_adjustment_list** | [**\Swagger\Client\Models\FeeComponentList**](FeeComponentList.md) |  | [optional] 
 **direct_payment_list** | [**\Swagger\Client\Models\DirectPaymentList**](DirectPaymentList.md) |  | [optional] 
-**posted_date** | [**\Swagger\Client\Models\\DateTime**](\DateTime.md) |  | [optional] 
+**posted_date** | \DateTime |  | [optional] 
 **shipment_item_list** | [**\Swagger\Client\Models\ShipmentItemList**](ShipmentItemList.md) |  | [optional] 
 **shipment_item_adjustment_list** | [**\Swagger\Client\Models\ShipmentItemList**](ShipmentItemList.md) |  | [optional] 
 

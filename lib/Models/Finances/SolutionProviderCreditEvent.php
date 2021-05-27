@@ -456,7 +456,7 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_creation_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \DateTime
      */
     public function getTransactionCreationDate()
     {
@@ -466,7 +466,7 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_creation_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $transaction_creation_date transaction_creation_date
+     * @param \DateTime $transaction_creation_date transaction_creation_date
      *
      * @return $this
      */

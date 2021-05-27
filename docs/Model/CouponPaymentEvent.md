@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**posted_date** | [**\Swagger\Client\Models\\DateTime**](\DateTime.md) |  | [optional] 
+**posted_date** | \DateTime |  | [optional] 
 **coupon_id** | **string** | A coupon identifier. | [optional] 
 **seller_coupon_description** | **string** | The description provided by the seller when they created the coupon. | [optional] 
 **clip_or_redemption_count** | **int** | The number of coupon clips or redemptions. | [optional] 

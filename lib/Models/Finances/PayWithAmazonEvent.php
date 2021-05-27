@@ -264,7 +264,7 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_posted_date.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime
+     * @return \DateTime
      */
     public function getTransactionPostedDate()
     {
@@ -274,7 +274,7 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_posted_date.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Finances\DateTime $transaction_posted_date transaction_posted_date
+     * @param \DateTime $transaction_posted_date transaction_posted_date
      *
      * @return $this
      */

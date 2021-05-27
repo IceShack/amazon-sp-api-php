@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **list_price** | [**\Swagger\Client\Models\MoneyType**](MoneyType.md) |  | [optional] 
 **suggested_lower_price_plus_shipping** | [**\Swagger\Client\Models\MoneyType**](MoneyType.md) |  | [optional] 
 **buy_box_eligible_offers** | [**\Swagger\Client\Models\BuyBoxEligibleOffers**](BuyBoxEligibleOffers.md) |  | [optional] 
-**offers_available_time** | [**\DateTime**](\DateTime.md) | When the status is ActiveButTooSoonForProcessing, this is the time when the offers will be available for processing. | [optional] 
+**offers_available_time** | \DateTime | When the status is ActiveButTooSoonForProcessing, this is the time when the offers will be available for processing. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

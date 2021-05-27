@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**posted_date** | [**\Swagger\Client\Models\\DateTime**](\DateTime.md) |  | [optional] 
+**posted_date** | \DateTime |  | [optional] 
 **original_removal_order_id** | **string** | The identifier for the original removal order. | [optional] 
 **liquidation_proceeds_amount** | [**\Swagger\Client\Models\Currency**](Currency.md) |  | [optional] 
 **liquidation_fee_amount** | [**\Swagger\Client\Models\Currency**](Currency.md) |  | [optional] 
