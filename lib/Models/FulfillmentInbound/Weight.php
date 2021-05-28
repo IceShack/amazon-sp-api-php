@@ -46,8 +46,9 @@ class Weight implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight',    ];
+        'value' => 'float',
+        'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfWeight',
+    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -199,7 +200,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Gets value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getValue()
     {
@@ -209,7 +210,7 @@ class Weight implements ModelInterface, ArrayAccess
     /**
      * Sets value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
+     * @param float $value value
      *
      * @return $this
      */

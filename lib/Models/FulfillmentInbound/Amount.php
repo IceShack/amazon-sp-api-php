@@ -47,7 +47,8 @@ class Amount implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'currency_code' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\CurrencyCode',
-'value' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',    ];
+        'value' => 'float',
+    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -223,7 +224,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Gets value.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getValue()
     {
@@ -233,7 +234,7 @@ class Amount implements ModelInterface, ArrayAccess
     /**
      * Sets value.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $value value
+     * @param float $value value
      *
      * @return $this
      */

@@ -46,10 +46,11 @@ class Dimensions implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'length' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'width' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'height' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType',
-'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement',    ];
+        'length' => 'float',
+        'width' => 'float',
+        'height' => 'float',
+        'unit' => '\ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\UnitOfMeasurement'
+    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -217,7 +218,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Gets length.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getLength()
     {
@@ -227,7 +228,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets length.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $length length
+     * @param float $length length
      *
      * @return $this
      */
@@ -241,7 +242,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Gets width.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getWidth()
     {
@@ -251,7 +252,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets width.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $width width
+     * @param float $width width
      *
      * @return $this
      */
@@ -265,7 +266,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Gets height.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType
+     * @return float
      */
     public function getHeight()
     {
@@ -275,7 +276,7 @@ class Dimensions implements ModelInterface, ArrayAccess
     /**
      * Sets height.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\FulfillmentInbound\BigDecimalType $height height
+     * @param float $height height
      *
      * @return $this
      */
