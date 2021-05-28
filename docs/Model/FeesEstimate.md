@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**time_of_fees_estimation** | [**\DateTime**](\DateTime.md) | The time for which the fees were estimated. This defaults to the time the request is made. | 
+**time_of_fees_estimation** | \DateTime | The time for which the fees were estimated. This defaults to the time the request is made. | 
 **total_fees_estimate** | [**\Swagger\Client\Models\MoneyType**](MoneyType.md) |  | [optional] 
 **fee_detail_list** | [**\Swagger\Client\Models\FeeDetailList**](FeeDetailList.md) |  | [optional] 
 

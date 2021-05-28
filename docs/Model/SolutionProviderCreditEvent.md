@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **provider_id** | **string** | The Amazon-defined identifier of the solution provider. | [optional] 
 **provider_store_name** | **string** | The store name where the payment event occurred. | [optional] 
 **transaction_amount** | [**\Swagger\Client\Models\Currency**](Currency.md) |  | [optional] 
-**transaction_creation_date** | [**\Swagger\Client\Models\\DateTime**](\DateTime.md) |  | [optional] 
+**transaction_creation_date** | \DateTime |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
