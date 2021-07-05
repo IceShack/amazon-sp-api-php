@@ -29,13 +29,11 @@
 namespace ClouSale\AmazonSellingPartnerAPI\Api;
 
 use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
+use ClouSale\AmazonSellingPartnerAPI\Models\Tokens\CreateRestrictedDataTokenResponse;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\RequestException;
-use ClouSale\AmazonSellingPartnerAPI\ApiException;
 use ClouSale\AmazonSellingPartnerAPI\Configuration;
 use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
-use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 
 /**
  * TokensApi Class Doc Comment
@@ -99,6 +97,7 @@ class TokensApi
     public function createRestrictedDataToken($body)
     {
         list($response) = $this->createRestrictedDataTokenWithHttpInfo($body);
+
         return $response;
     }
 
@@ -113,202 +112,9 @@ class TokensApi
      */
     public function createRestrictedDataTokenWithHttpInfo($body)
     {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\CreateRestrictedDataTokenResponse';
         $request = $this->createRestrictedDataTokenRequest($body);
 
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\CreateRestrictedDataTokenResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 415:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 429:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 503:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\ErrorList',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation createRestrictedDataTokenAsync
-     *
-     *
-     *
-     * @param  \ClouSale\AmazonSellingPartnerAPI\Models\Tokens\CreateRestrictedDataTokenRequest $body The restricted data token request details. (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function createRestrictedDataTokenAsync($body)
-    {
-        return $this->createRestrictedDataTokenAsyncWithHttpInfo($body)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation createRestrictedDataTokenAsyncWithHttpInfo
-     *
-     *
-     *
-     * @param  \ClouSale\AmazonSellingPartnerAPI\Models\Tokens\CreateRestrictedDataTokenRequest $body The restricted data token request details. (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function createRestrictedDataTokenAsyncWithHttpInfo($body)
-    {
-        $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Tokens\CreateRestrictedDataTokenResponse';
-        $request = $this->createRestrictedDataTokenRequest($body);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
+        return $this->sendRequest($request, CreateRestrictedDataTokenResponse::class);
     }
 
     /**
