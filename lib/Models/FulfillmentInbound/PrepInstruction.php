@@ -36,6 +36,7 @@ class PrepInstruction
     const LABELING = 'Labeling';
     const HANG_GARMENT = 'HangGarment';
     const BOXING = 'Boxing';
+    const SET_CREATION = 'SetCreation';
 
     /**
      * Gets allowable values of the enum.
@@ -51,7 +52,8 @@ class PrepInstruction
             self::BLACK_SHRINK_WRAPPING,
             self::LABELING,
             self::HANG_GARMENT,
-            self::BOXING
+            self::BOXING,
+            self::SET_CREATION,
         ];
     }
 }
